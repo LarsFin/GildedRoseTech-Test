@@ -10,6 +10,20 @@ public class GildedRose {
         this.items = items;
     }
 
+    public void updateSellIn() {
+
+        for(Item item: items) {
+
+            try {
+                ((QualityAlteringItem) item).updateSellIn();
+            } catch(Exception e) {
+                System.out.println(e.toString());
+            }
+
+        }
+
+    }
+
     public void updateQuality() {
 
         for(Item item: items) {
@@ -21,6 +35,13 @@ public class GildedRose {
             }
 
         }
+
+    }
+
+    public void dayPasses() {
+
+        updateSellIn();
+        updateQuality();
 
     }
 

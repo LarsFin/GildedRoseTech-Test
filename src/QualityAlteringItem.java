@@ -5,7 +5,6 @@ public class QualityAlteringItem extends Item{
     }
 
     void updateQuality() {
-        ageItemBy1();
     }
 
     void decreaseItemQualityBy1() {
@@ -18,6 +17,10 @@ public class QualityAlteringItem extends Item{
         if(quality < 50) {
             this.quality += 1;
         }
+    }
+
+    void updateSellIn() {
+        ageItemBy1();
     }
 
     void ageItemBy1() {
